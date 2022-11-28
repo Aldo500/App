@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OlvidePass"
+    android:background="#B39DDB">
+
+    <Button
+        android:id="@+id/forget2"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#AC2BC3"
+        android:onClick="Volver"
+        android:text="Regresar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginid3"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/loginid3"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#AC2BC3"
+        android:onClick="RecuperarContraseña"
+        android:text="Recuperar Contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextpassPass"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
+
+    <EditText
+        android:id="@+id/editTextpassPass"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#CD7ADC"
+        android:contextClickable="true"
+        android:ems="10"
+        android:hint="Correo: "
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewISPassword2" />
+
+    <TextView
+        android:id="@+id/textViewISPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="28dp"
+        android:background="#BB37D3"
+        android:text="Email"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextusrPass" />
+
+    <EditText
+        android:id="@+id/editTextusrPass"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:background="#CD7ADC"
+        android:ems="10"
+        android:hint="Usuario: "
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9F9F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewISuserName2" />
+
+    <TextView
+        android:id="@+id/textViewISuserName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="96dp"
+        android:background="#BB37D3"
+        android:text="Usuario"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
