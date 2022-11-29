@@ -4,7 +4,14 @@
         android:id="@+id/item1"
         android:title="Agregar contraseña" />
     <item
+        android:id="@+id/item4"
+        android:title="Borrar" />
+    <item
+        android:id="@+id/item2"
+        android:title="Json" />
+    <item
         android:id="@+id/item3"
         android:title="Login" />
+
 
 </menu>

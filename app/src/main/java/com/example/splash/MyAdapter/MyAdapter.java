@@ -17,7 +17,7 @@ public class MyAdapter extends BaseAdapter implements Serializable {
     private List<MyData> list;
     private Context context;
     private LayoutInflater layoutInflater;
-    private int []imagenes ={R.drawable.anadimg,R.drawable.editimg};
+    private int []imagenes ={R.drawable.feliz,R.drawable.ver};
 
     public MyAdapter(List<MyData> list, Context context){
         this.list = list;
@@ -69,8 +69,8 @@ public class MyAdapter extends BaseAdapter implements Serializable {
         textView.setText(list.get(i).getPassRed());
         textView2.setText(list.get(i).getRed());
         imageView = view.findViewById(R.id.imageViewId);
-        imageView2 = view.findViewById(R.id.anadimg);
-        imageView3 = view.findViewById(R.id.editimg);
+        imageView2 = view.findViewById(R.id.feliz);
+        imageView3 = view.findViewById(R.id.ver);
         imageView.setImageResource(list.get(i).getPerfil());
         imageView2.setImageResource(imagenes[0]);
         imageView3.setImageResource(imagenes[1]);

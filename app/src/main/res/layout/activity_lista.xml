@@ -27,17 +27,17 @@
         android:text="TextView" />
 
     <ImageView
-        android:id="@+id/anadimg"
+        android:id="@+id/feliz"
         android:layout_width="7dp"
         android:layout_height="48dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/anadimg" />
+        app:srcCompat="@drawable/feliz" />
 
     <ImageView
-        android:id="@+id/editimg"
+        android:id="@+id/ver"
         android:layout_width="17dp"
         android:layout_height="45dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/editimg" />
+        app:srcCompat="@drawable/ver" />
 
 </LinearLayout>
