@@ -59,7 +59,6 @@ public class entrada extends AppCompatActivity {
         usrtext = findViewById(R.id.datosusr);
         listView = (ListView) findViewById(R.id.listViewId);
         lista = new ArrayList<MyData>();
-        editTextcontra = findViewById(R.id.textViewId2);
 
         Intent intent = getIntent();
         for(int i = 0; i <4; i++){
@@ -165,6 +164,11 @@ public class entrada extends AppCompatActivity {
             editTextcontra.setText("");
             Toast.makeText(getApplicationContext(), "Se eliminó la contraseña", Toast.LENGTH_LONG).show();
 
+        }
+        if (id == R.id.itemapi) {
+            Intent intent = new Intent(entrada.this, MainActivityAPI.class);
+            startActivity(intent);
+            return true;
         }
         if (id == R.id.item3) {
             Intent intent = new Intent(entrada.this, login.class);

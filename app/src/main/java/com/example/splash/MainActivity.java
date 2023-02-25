@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.splash.network.PokemonLoader;
+import com.example.splash.network.models.PokemonListResponse;
+
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -15,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         new Handler().postDelayed(new Runnable() {
             @Override

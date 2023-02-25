@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,20 +24,28 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.text.BreakIterator;
 
 public class OlvidePass extends AppCompatActivity {
+    Button button1;
+    public static String usr,passw;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_olvidepass);
+        button1=findViewById(R.id.loginid3);
     }
 
     public void RecuperarContraseña (View v){
         EditText userName = (EditText) findViewById(R.id.editTextusrPass);
         EditText Mail = (EditText) findViewById(R.id.editTextpassPass);
 
-        String mensaje = "";
+        usr = String.valueOf(userName.getText());
+
+        String mensaje="";
+
 
         if("".equals(userName.getText().toString()) || "".equals(Mail.getText().toString()))
         {
@@ -55,7 +64,7 @@ public class OlvidePass extends AppCompatActivity {
                     break;
                 }
             }
-            if(userName.length() > 20 || Mail.length() > 25 || TipoCorreo == false){
+            if(userName.length() > 20 || Mail.length() > 40 || TipoCorreo == false){
                 mensaje = "Parametro Erroneo";
                 if(userName.length() > 20){mensaje = "Nombre de usuario muy largo";}
                 if(Mail.length() > 70){mensaje = "Correo muy largo";}
@@ -77,8 +86,11 @@ public class OlvidePass extends AppCompatActivity {
                             file.close();
 
                             MyInfo datos = json.leerJson(lineaTexto);
-                            String valorName = myDes.desCifrar(datos.getUsuario());
-                            String valorMail = myDes.desCifrar(datos.getCorreo());
+                            String valorName = datos.getUsuario();
+                            String valorMail = datos.getCorreo();
+                            String contra= datos.getContraseña();
+                            String nueva = String.format("%d",(int)(Math.random()*10000));
+                            mensaje="<html><head><title>Recuperar Contraseña</title></head><body><div><h1>RECUPERAR CONTRASEÑA :)</h1><br><br><p>Esta es tu nueva contraseña:"+contra+"</p><p>Tu anterior contraseña era:"+nueva+"</p></div></body></html>";
 
                             if (valorName.equals(userName.getText().toString()) & valorMail.equals(Mail.getText().toString())) {
                                 mensaje = "Usuario encontrado";
