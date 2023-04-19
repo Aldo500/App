@@ -59,7 +59,6 @@ public class entrada extends AppCompatActivity {
         usrtext = findViewById(R.id.datosusr);
         listView = (ListView) findViewById(R.id.listViewId);
         lista = new ArrayList<MyData>();
-        editTextcontra = findViewById(R.id.textViewId2);
 
         Intent intent = getIntent();
         for(int i = 0; i <4; i++){
@@ -146,17 +145,11 @@ public class entrada extends AppCompatActivity {
             return true;
         }
 
-        /*if (id == R.id.item2) {
-            int i = 0;
-            for (MyInfo inf : list) {
-                if (myInfo.getUsuario().equals(inf.getUsuario())) {
-                    list.get(i).setContras(lista);
-                }
-                i++;
-            }
-            List2Json(myInfo, list);
+        if (id == R.id.item2) {
+            Intent intent = new Intent(entrada.this, Mapa.class);
+            startActivity(intent);
             return true;
-        }*/
+        }
         if (id == R.id.item4) {
             lista.remove(pos);
             MyData myData = new MyData();
